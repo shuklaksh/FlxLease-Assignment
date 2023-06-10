@@ -4,7 +4,7 @@ import bedroom3 from '../images/bedroom3.jpeg'
 import bedroom4 from '../images/bedroom4.webp'
 
 export const roomData = [{
-    image: bedroom1,
+    image: bedroom2,
     name: "Double standard room",
     size: "18 sqm",
     people: "2 people",
@@ -12,7 +12,7 @@ export const roomData = [{
     price: 180
 },
 {
-    image: bedroom2,
+    image: bedroom1,
     name: "Comfort single room",
     size: "21 sqm",
     people: "2 people",

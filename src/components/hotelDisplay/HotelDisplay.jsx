@@ -4,24 +4,25 @@ import bedroom from '../../assets/images/bedroom.jpeg'
 import balcony from '../../assets/images/balcony.jpeg'
 import bathroom from '../../assets/images/bathroom.webp'
 import entryView from '../../assets/images/entryView.jpeg'
+import Overview from '../bookRoom/Overview';
 
 
 function HotelDisplay() {
   return (
-    <div className='p-8 w-full'>
+    <div className='p-8 w-full grid grid-rows-1 h-5/6'>
       <ArrowBackIcon />
-      <div className="image-section grid grid-cols-2 grid-rows-1 gap-4 mt-4 h-full "> 
+      <div className="image-section grid grid-cols-2 grid-rows-1 gap-4 mt-4 h-5/6 "> 
         <div className="bedroom">
             <img src={bedroom} alt='bedroom' className='rounded-3xl h-full w-full'></img>
         </div>
         <div className="otherRooms grid grid-cols-2 grid-rows-2 gap-2">
-            <img src={entryView} alt='bedroom' className='rounded-3xl h-full w-full'></img>
+            <img src={entryView} alt='entryView' className='rounded-3xl h-full w-full'></img>
             <img src={bedroom} alt='bedroom' className='rounded-3xl h-full w-full'></img>
-            <img src={balcony} alt='bedroom' className='rounded-3xl h-full w-full'></img>
-            <img src={bathroom} alt='bedroom' className='rounded-3xl h-full w-full'></img>
+            <img src={balcony} alt='balcony' className='rounded-3xl h-full w-full'></img>
+            <img src={bathroom} alt='bathroom' className='rounded-3xl h-full w-full'></img>
         </div>
       </div>
-      <div className="hotelCredentials mt-4 mx-2 flex justify-between">
+      <div className="hotelCredentials mx-2 flex justify-between">
        <div className="hotelName">
             <h2 className = "text-xl font-bold" >Hotel Norrebro</h2>
             <p className='text-gray-500 text-sm'>3 star hotel located in heart of Copenhagen</p>
@@ -44,6 +45,7 @@ function HotelDisplay() {
               <li> Policies </li>
           </ul>
         </div>
+        <Overview />
 
     </div>
   )

@@ -1,5 +1,5 @@
 import React from 'react'
-import { roomData } from '../assets/data/RoomData'
+import { roomData } from '../../assets/data/RoomData'
 import RoomCard from './RoomCard'
 
 
