@@ -18,7 +18,7 @@ function HotelDisplay() {
     setFeatureIndex(e.target.value);
   }
   return (
-    <div className='p-8 w-full grid grid-rows-1 h-5/6'>
+    <div className='p-4 md:p-8 w-full grid grid-rows-1 h-5/6'>
       <ArrowBackIcon />
       <div className="image-section grid-cols-2 grid-rows-1 gap-4 mt-4 h-5/6 md:grid md:w-full"> 
         <div className="bedroom">
