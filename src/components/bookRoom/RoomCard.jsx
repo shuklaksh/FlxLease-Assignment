@@ -4,7 +4,7 @@ import BedIcon from '@mui/icons-material/Bed';
 
 function RoomCard({room}) {
   return (
-    <div className='bg-white rounded-xl  p-2 pb-1 w-11/12 h-full'>
+    <div className='bg-white rounded-xl p-4 w-full h-full'>
         <div className="roomImage h-1/2">
             <img className= "w-full h-full rounded-xl" src={room.image} alt='bedroom'/>
         </div>

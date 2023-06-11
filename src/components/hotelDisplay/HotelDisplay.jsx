@@ -47,11 +47,11 @@ function HotelDisplay() {
        </div>
       </div>
       <div className="hotelFeatures mx-2 mt-4 pb-1 border-b">
-          <ul className="featers flex gap-24 ml-8 text-gray-500">
-              <li onClick={handleClick} value={0}> Overview </li>
-              <li onClick={handleClick} value={1}> Rooms </li>
-              <li onClick={handleClick} value={2}> Amenities </li>
-              <li onClick={handleClick} value={3}> Policies </li>
+          <ul className="featers flex gap-24 ml-8 text-gray-500 ">
+              <li className='cursor-pointer' onClick={handleClick} value={0}> Overview </li>
+              <li className='cursor-pointer'onClick={handleClick} value={1}> Rooms </li>
+              <li className='cursor-pointer'onClick={handleClick} value={2}> Amenities </li>
+              <li className='cursor-pointer'onClick={handleClick} value={3}> Policies </li>
           </ul>
         </div>
         {hotelFeatures[featureIndex]}

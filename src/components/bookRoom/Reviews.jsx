@@ -6,13 +6,13 @@ function Reviews() {
   return (
     <div className=' p-8 pb-12'>
       <h2 className='text-lg text-semibold mb-2'>Reviews</h2>
-      <div className="review flex gap-24 w-full">
-        <div className="reviewGraph w-1/3 flex flex-col gap-2">
+      <div className="review flex flex-col gap-24 w-full lg:flex-row  ">
+        <div className="reviewGraph w-full flex flex-col gap-2 lg:w-1/3">
             <p className='text-3xl text-light text-blue-500'>9.6/10</p>
             {
-                RatingData.map((data) => {
+                RatingData.map((data,index) => {
                     return (
-                        <>
+                        <div key={index}>
                             <div className="labelProgress flex justify-between text-sm">
                                 <p>{data.name}</p>
                                 <p>{`${data.rating}/10`}</p>
@@ -21,7 +21,7 @@ function Reviews() {
                             percent={data.rating * 100 / 10}
                             height={5}
                             />
-                        </>
+                        </div>
                     )
                 })
             }
@@ -32,9 +32,9 @@ function Reviews() {
         </div>
         <div className="reviewText w-full flex flex-col gap-4">
             {
-                ReviewData.map((data) => {
+                ReviewData.map((data,index) => {
                     return (
-                        <div className="border-b-2 pb-2">
+                        <div className="border-b-2 pb-2" key={index}>
                             <div className="flex justify-between">
                                 <div>
                                     <p className="font-bold text-lg">{data.title}</p>
@@ -52,9 +52,9 @@ function Reviews() {
                                 <div>
                                     <p>{data.ratingMessage}</p>
                                     <ul className="list-disc ml-8">
-                                        {data.pointers.map((point) => {
+                                        {data.pointers.map((point,index) => {
                                             return(
-                                                <li>{point}</li>
+                                                <li key={index} >{point}</li>
                                             )
                                         })}
                                     </ul>

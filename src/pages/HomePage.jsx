@@ -6,12 +6,12 @@ import Reviews from '../components/bookRoom/Reviews'
 
 function HomePage() {
   return (
-    <div>
+    <>
       <Navbar /> 
       <HotelDisplay />
       <BookRooms />
       <Reviews />
-    </div>
+    </>
   )
 }
 
