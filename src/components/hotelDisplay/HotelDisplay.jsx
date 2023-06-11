@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import bedroom from '../../assets/images/bedroom.jpeg'
 import balcony from '../../assets/images/balcony.jpeg'
 import bathroom from '../../assets/images/bathroom.webp'
 import entryView from '../../assets/images/entryView.jpeg'
 import Overview from '../bookRoom/Overview';
-
+import Policies from '../bookRoom/Policies';
+import Rooms from '../bookRoom/Rooms';
+import Amenities from '../bookRoom/Amenities';
 
 function HotelDisplay() {
+  const hotelFeatures = [<Overview />,<Rooms />, <Amenities />, <Policies />];
+  const [featureIndex,setFeatureIndex] = useState(0);
+
+  const handleClick = (e) => {
+
+    setFeatureIndex(e.target.value);
+  }
   return (
     <div className='p-8 w-full grid grid-rows-1 h-5/6'>
       <ArrowBackIcon />
@@ -39,13 +48,13 @@ function HotelDisplay() {
       </div>
       <div className="hotelFeatures mx-2 mt-4 pb-1 border-b">
           <ul className="featers flex gap-24 ml-8 text-gray-500">
-              <li> Overview </li>
-              <li> Rooms </li>
-              <li> Amenities </li>
-              <li> Policies </li>
+              <li onClick={handleClick} value={0}> Overview </li>
+              <li onClick={handleClick} value={1}> Rooms </li>
+              <li onClick={handleClick} value={2}> Amenities </li>
+              <li onClick={handleClick} value={3}> Policies </li>
           </ul>
         </div>
-        <Overview />
+        {hotelFeatures[featureIndex]}
 
     </div>
   )
