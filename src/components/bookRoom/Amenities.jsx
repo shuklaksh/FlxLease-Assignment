@@ -8,7 +8,7 @@ import TvIcon from '@mui/icons-material/Tv';
 
 function Amenities() {
   return (
-    <div className='mx-2 mt-6 w-1/2' >
+    <div className='mx-2 mt-6 md:w-1/2' >
      <h2 className='font-bold mb-4'>Amenities</h2>
       <ul className = 'grid grid-rows-4 grid-cols-2 text-xs gap-4' >
         <li className='text-gray-600'> <span> <RoomServiceIcon  className='mr-4 text-gray-800'/> </span>Room Service</li>

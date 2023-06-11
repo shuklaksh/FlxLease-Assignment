@@ -20,11 +20,11 @@ function HotelDisplay() {
   return (
     <div className='p-8 w-full grid grid-rows-1 h-5/6'>
       <ArrowBackIcon />
-      <div className="image-section grid grid-cols-2 grid-rows-1 gap-4 mt-4 h-5/6 "> 
+      <div className="image-section grid-cols-2 grid-rows-1 gap-4 mt-4 h-5/6 md:grid md:w-full"> 
         <div className="bedroom">
             <img src={bedroom} alt='bedroom' className='rounded-3xl h-full w-full'></img>
         </div>
-        <div className="otherRooms grid grid-cols-2 grid-rows-2 gap-2">
+        <div className="otherRooms grid-cols-2 grid-rows-2 gap-2 hidden md:grid">
             <img src={entryView} alt='entryView' className='rounded-3xl h-full w-full'></img>
             <img src={bedroom} alt='bedroom' className='rounded-3xl h-full w-full'></img>
             <img src={balcony} alt='balcony' className='rounded-3xl h-full w-full'></img>
@@ -46,8 +46,8 @@ function HotelDisplay() {
             </div>
        </div>
       </div>
-      <div className="hotelFeatures mx-2 mt-4 pb-1 border-b">
-          <ul className="featers flex gap-24 ml-8 text-gray-500 ">
+      <div className="hotelFeatures mx-2 mt-4 pb-1 border-b w-screen md:w-full">
+          <ul className="featers flex gap-4 text-gray-500 md:ml-8 md:gap-24 ">
               <li className='cursor-pointer' onClick={handleClick} value={0}> Overview </li>
               <li className='cursor-pointer'onClick={handleClick} value={1}> Rooms </li>
               <li className='cursor-pointer'onClick={handleClick} value={2}> Amenities </li>

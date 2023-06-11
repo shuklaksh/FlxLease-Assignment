@@ -21,7 +21,7 @@ function Overview() {
                 <span className='text-gray-600'> <WatchLaterIcon className='mr-4 text-gray-800'/> 24-hour front desk </span>
             </div>
         </div>
-        <div className="map w-1/5">
+        <div className="map w-1/5 hidden md:block">
             <img className='rounded-3xl h-full' src={mapImage} alt='map' /> 
         </div>
     </div>
