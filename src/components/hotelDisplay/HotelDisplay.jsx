@@ -22,7 +22,7 @@ function HotelDisplay() {
       <ArrowBackIcon />
       <div className="image-section grid-cols-2 grid-rows-1 gap-4 mt-4 h-5/6 md:grid md:w-full"> 
         <div className="bedroom">
-            <img src={bedroom} alt='bedroom' className='rounded-3xl h-full w-full'></img>
+            <img src={bedroom} alt='bedroom' className='rounded-3xl h-full w-5/6 md:w-full'></img>
         </div>
         <div className="otherRooms grid-cols-2 grid-rows-2 gap-2 hidden md:grid">
             <img src={entryView} alt='entryView' className='rounded-3xl h-full w-full'></img>
@@ -31,7 +31,7 @@ function HotelDisplay() {
             <img src={bathroom} alt='bathroom' className='rounded-3xl h-full w-full'></img>
         </div>
       </div>
-      <div className="hotelCredentials mx-2 flex justify-between">
+      <div className="hotelCredentials mx-2 md:flex md:justify-between">
        <div className="hotelName">
             <h2 className = "text-xl font-bold" >Hotel Norrebro</h2>
             <p className='text-gray-500 text-sm'>3 star hotel located in heart of Copenhagen</p>

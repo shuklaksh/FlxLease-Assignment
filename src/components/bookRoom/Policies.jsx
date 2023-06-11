@@ -7,7 +7,7 @@ function Policies() {
   return (
     <div className='mx-2 mt-6 md:w-1/2 h-full'>
        <h2 className='font-bold mb-4'>Policies</h2>
-      <ul className='grid grid-rows-2 grid-cols-1 md:grid-cols-2 md:gap-2 md:text-sm '>
+      <ul className='grid grid-rows-2 grid-cols-1 text-xs md:grid-cols-2 md:gap-2 md:text-sm '>
         <li>
           <h3 className='font-bold text-sm text-gray-600'>  <span className=' text-gray-800'><WatchLaterIcon /> </span> Check-in/Check-out times</h3>
           <p className='ml-8  text-gray-600 mb-1'>Check-in from 11:00 AM until 11:30 PM</p>
