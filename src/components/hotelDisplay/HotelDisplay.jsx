@@ -57,10 +57,10 @@ function HotelDisplay() {
           <TabContext value={featureIndex}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
               <TabList onChange={handleChange} aria-label="lab API tabs example" >
-                <Tab className='!text-xs md:!text-base' label="Overview" value="0" />
-                <Tab className='!text-xs md:!text-base'label="Rooms" value="1" />
-                <Tab className='!text-xs md:!text-base'label="Amenities" value="2" />
-                <Tab className='!text-xs md:!text-base'label="Policies" value="3"/>
+                <Tab className='!text-xs md:!text-sm' label="Overview" value="0" />
+                <Tab className='!text-xs md:!text-sm'label="Rooms" value="1" />
+                <Tab className='!text-xs md:!text-sm'label="Amenities" value="2" />
+                <Tab className='!text-xs md:!text-sm'label="Policies" value="3"/>
               </TabList>
             </Box>
           </TabContext>
