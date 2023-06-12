@@ -8,18 +8,24 @@ import Overview from '../bookRoom/Overview';
 import Policies from '../bookRoom/Policies';
 import Rooms from '../bookRoom/Rooms';
 import Amenities from '../bookRoom/Amenities';
+import Box from '@mui/material/Box';
+import Tab from '@mui/material/Tab';
+import TabContext from '@mui/lab/TabContext';
+import TabList from '@mui/lab/TabList';
+
+
 
 function HotelDisplay() {
   const hotelFeatures = [<Overview />,<Rooms />, <Amenities />, <Policies />];
-  const [featureIndex,setFeatureIndex] = useState(0);
+  const [featureIndex,setFeatureIndex] = useState("0");
 
-  const handleClick = (e) => {
-
-    setFeatureIndex(e.target.value);
+  const handleChange = (e,newValue) => {
+    console.log(e.target.value)
+    setFeatureIndex(newValue);
   }
   return (
     <div className='p-4 md:p-8 w-full grid grid-rows-1 h-5/6'>
-      <ArrowBackIcon />
+      <ArrowBackIcon className='!hidden md:!block'/>
       <div className="image-section grid-cols-2 grid-rows-1 gap-4 mt-4 h-5/6 md:grid md:w-full"> 
         <div className="bedroom">
             <img src={bedroom} alt='bedroom' className='rounded-3xl h-full w-5/6 md:w-full'></img>
@@ -46,15 +52,21 @@ function HotelDisplay() {
             </div>
        </div>
       </div>
-      <div className="hotelFeatures mx-2 mt-4 pb-1 border-b w-screen md:w-full">
-          <ul className="featers flex gap-4 text-gray-500 md:ml-8 md:gap-24 ">
-              <li className='cursor-pointer' onClick={handleClick} value={0}> Overview </li>
-              <li className='cursor-pointer'onClick={handleClick} value={1}> Rooms </li>
-              <li className='cursor-pointer'onClick={handleClick} value={2}> Amenities </li>
-              <li className='cursor-pointer'onClick={handleClick} value={3}> Policies </li>
-          </ul>
-        </div>
-        {hotelFeatures[featureIndex]}
+      <div className="hotelFeatures mx-2 mt-4 pb-1 w-screen md:w-full">
+          <Box sx={{ width: '100%', typography: 'body1' }}>
+          <TabContext value={featureIndex}>
+            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+              <TabList onChange={handleChange} aria-label="lab API tabs example" >
+                <Tab className='!text-xs md:!text-base' label="Overview" value="0" />
+                <Tab className='!text-xs md:!text-base'label="Rooms" value="1" />
+                <Tab className='!text-xs md:!text-base'label="Amenities" value="2" />
+                <Tab className='!text-xs md:!text-base'label="Policies" value="3"/>
+              </TabList>
+            </Box>
+          </TabContext>
+        </Box>
+      </div>
+        {hotelFeatures[featureIndex - 0]}
 
     </div>
   )
